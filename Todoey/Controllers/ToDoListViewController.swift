@@ -119,8 +119,8 @@ func saveItems () {
         let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES @%", selectedCategory!.name!)
         
         if let additionalPredicate = predicate {
-            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates [categoryPredicate, additionalPredicate])
-        }else{
+            request.predicate = NSCompoundPredicate (andPredicateWithSubpredicates: [categoryPredicate, additionalPredicate])
+        } else {
         
             request.predicate = categoryPredicate}
         
